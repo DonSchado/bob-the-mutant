@@ -19,7 +19,7 @@ You can take a detailed look with ```open coverage/index.html```.
 
 If you look at the specs, only the _Bob_ class has some reasonable tests to ensure the functionality of Bob. But Bob uses the _Statement_ class which holds most of the "business logic" (what is covered through the specs from Bob).
 
-Now run the mutation tester with ```rake spec:mutant```.
+Now run the mutation tester with ```rake mutant:all```.
 The Output should look like this:
 
 - Subjects:  6
@@ -47,3 +47,4 @@ Look at the output what mutant change and **KILL ALL THE MUTANTS!**
 
 Write some specs to kill the mutations on the statement class, or feel free to refactor everything.
 
+Type ```rake -T``` to list all available tasks.
