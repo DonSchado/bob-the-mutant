@@ -39,6 +39,7 @@ More concrete? The easiest thing mutant did for example:
 ![mutation](/img/mutation.png)
 
 Wow, even something that raises an exception is not covered by tests. That's pretty bad, isn't it?
+(To be fair, since _Bob_ integrates the _Statement_ class, this will be covered, but in isolation it won't, because there are no corresponding tests for _Statement_.)
 
 ### Now what?
 
