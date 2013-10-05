@@ -42,7 +42,7 @@ Wow, even something that raises an exception is not covered by tests. That's pre
 
 ### Now what?
 
-Look at the output what mutant changes and **KILL ALL THE MUTANTS!**
+Look at the output what mutant change and **KILL ALL THE MUTANTS!**
 
 Write some specs to kill the mutations on the statement class, or feel free to refactor everything.
 
