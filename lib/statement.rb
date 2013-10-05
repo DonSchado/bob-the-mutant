@@ -1,7 +1,7 @@
 class Statement
   attr_reader :sentence
 
-  def initialize(sentence="")
+  def initialize(sentence)
     @sentence = String(sentence)
   end
 
