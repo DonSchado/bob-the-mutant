@@ -7,13 +7,17 @@ But then the [**MUTANTS**](https://github.com/mbj/mutant) came ... and everythin
 
 ### About
 
-This example proofs that 100% code coverage can be very misleading.
+This example proofs that 100% code coverage can be very misleading. Run all the specs with ```rake```:
 
-Run all the specs with ```rake```.
-The generated report confirms a coverage of 100.0%.
-If you look at the specs, only the _Bob_ class has some reasonable tests to ensure the functionality of Bob. But Bob uses the _Statement_ class which holds most of the "business logic" (what is covered through the specs from Bob).
+![fabulous](/img/fabulous.png)
+
+Cool, everything is working and the generated report confirms a coverage of 100.0%.
 
 You can take a detailed look with ```open coverage/index.html```.
+
+![coverage](/img/coverage.png)
+
+If you look at the specs, only the _Bob_ class has some reasonable tests to ensure the functionality of Bob. But Bob uses the _Statement_ class which holds most of the "business logic" (what is covered through the specs from Bob).
 
 Now run the mutation tester with ```rake spec:mutant```.
 The Output should look like this:
@@ -28,12 +32,17 @@ The Output should look like this:
 - **Alive:     34**
 
 _Woah!_ There are 34 mutants alive which our test suite wasn't able to kill.
-This means that the implementation could be changed, but the tests won't recognize  it.
-That's pretty bad, isn't it?
+This means that the implementation could be changed, but the tests won't recognize it.
+
+More concrete? The easiest thing mutant did for example:
+
+![mutation](/img/mutation.png)
+
+Wow, even something that raises an exception is not covered by tests. That's pretty bad, isn't it?
 
 ### Now what?
 
-**KILL ALL THE MUTANTS!**
+Look at the output what mutant changes and **KILL ALL THE MUTANTS!**
 
 Write some specs to kill the mutations on the statement class, or feel free to refactor everything.
 
